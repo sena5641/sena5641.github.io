@@ -4,8 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #8192ff; 
-    color: rgb(0, 0, 0);
+    background-color: white; 
+    color: black;
     position: relative;
     overflow-x: hidden;
 
@@ -14,10 +14,19 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 10px ;
     position: relative;
     z-index: 1;
 }
+
+.gg {
+    background-color: rgba(31, 28, 255, 0.4);
+    border-radius: 15px;
+    margin: 50px;
+    padding: 5px;
+}
+
+
 
 /* Background Shapes */
 .shapes {
