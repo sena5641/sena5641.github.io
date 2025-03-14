@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Продукт проекта</title>
     <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="{{ "index.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
+    <link rel="stylesheet" href="{{ 'css/style.css' | relative_url }}?{{ site.time | date: '%s%N' }}">
+
 </head>
 <body>
     <div class="shapes">
@@ -18,7 +19,7 @@
         <div class="shape"></div>
     </div>
     
-
+    
 
     <main>
         <section>
