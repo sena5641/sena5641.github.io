@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: never;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #8192ff; 
+    color: rgb(0, 0, 0);
+    position: relative;
+    overflow-x: hidden;
+
+}
+
+/* Background Shapes */
+.shapes {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.shape {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Circle */
+.shape:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 10%;
+    left: 10%;
+    animation: float 8s infinite ease-in-out;
+}
+
+/* Square */
+.shape:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+    bottom: 15%;
+    right: 10%;
+    animation: float 6s infinite ease-in-out reverse;
+}
+
+/* Triangle */
+.shape:nth-child(3) {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 173px solid rgba(255, 255, 255, 0.1);
+    top: 40%;
+    left: 30%;
+    animation: float 4,28s infinite linear;
+}
+
+/* Rectangle */
+.shape:nth-child(4) {
+    width: 200px;
+    height: 100px;
+    top: 20%;
+    right: 20%;
+    animation: pulse 4,28s infinite ease-in-out;
+}
+
+/* Small dots */
+.shape:nth-child(5),
+.shape:nth-child(6),
+.shape:nth-child(7) {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: float 4,28s infinite ease-in-out;
+}
+
+.shape:nth-child(5) { top: 60%; left: 15%; animation-delay: 0.5s; }
+.shape:nth-child(6) { top: 30%; right: 35%; animation-delay: 1s; }
+.shape:nth-child(7) { bottom: 20%; left: 40%; animation-delay: 1.5s; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+text-align: center;
+}
+
+nav ul {
+list-style-type: none;
+padding: 0;
+text-align: center;
+}
+
+nav ul li {
+display: inline;
+margin-right: 15px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+}
+
+main {
+padding: 20px;
+}
+
+.recommendations {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recommendations li {
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.recommendations li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
