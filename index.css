@@ -11,6 +11,14 @@ body {
 
 }
 
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
 /* Background Shapes */
 .shapes {
     position: fixed;
@@ -18,11 +26,6 @@ body {
     height: 100%;
     z-index: -1;
 }
-
-
-.shape:nth-child(5) { top: 60%; left: 15%; animation-delay: 0.5s; }
-.shape:nth-child(6) { top: 30%; right: 35%; animation-delay: 1s; }
-.shape:nth-child(7) { bottom: 20%; left: 40%; animation-delay: 1.5s; }
 
 @keyframes float {
     0% { transform: translateY(0); }
@@ -41,51 +44,4 @@ body {
     100% { transform: scale(1); }
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: relative;
-    z-index: 1;
-}
 
-header h1 {
-text-align: center;
-}
-
-nav ul {
-list-style-type: none;
-padding: 0;
-text-align: center;
-}
-
-nav ul li {
-display: inline;
-margin-right: 15px;
-}
-
-nav ul li a {
-color: white;
-text-decoration: none;
-}
-
-main {
-padding: 20px;
-}
-
-.recommendations {
-    list-style-type: none;
-    padding: 0;
-}
-
-.recommendations li {
-    margin-bottom: 1em;
-    padding-left: 1.5em;
-    position: relative;
-}
-
-.recommendations li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-}
