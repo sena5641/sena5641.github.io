@@ -7,11 +7,11 @@ body {
     background-color: black; 
     color: white;
     position: relative;
-   kgherflow-x: hidden;
+    overflow-x: hidden;
 
 }
 
-input {
+.in {
     background-color: gray;
     border-radius: 15px;
     border: 3px
