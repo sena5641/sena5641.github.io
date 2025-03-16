@@ -7,8 +7,14 @@ body {
     background-color: black; 
     color: white;
     position: relative;
-    overflow-x: hidden;
+   kgherflow-x: hidden;
 
+}
+
+input {
+    background-color: gray;
+    border-radius: 15px;
+    border: 3px
 }
 
 .gg {
