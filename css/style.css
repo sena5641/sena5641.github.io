@@ -18,7 +18,7 @@ body {
     border-image: 3px linear-gradient(45deg, #0ff, #f0f);
     box-shadow: 0px 0px 5px 1px ;
     margin: 5px;
-    align: center;
+    vertical-align: center;
 }
 
 .gg {
