@@ -1,0 +1,6 @@
+{
+    "livePreview.customExternalBrowser": "Edge",
+    "livePreview.showServerStatusNotifications": true,
+    "livePreview.tasks.runTaskWithExternalPreview": false,
+    "livePreview.serverKeepAliveAfterEmbeddedPreviewClose": 0
+}

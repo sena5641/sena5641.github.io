@@ -21,13 +21,24 @@ body {
 
 .in {
     background: none;
+    padding: 5px;
+    border: none;
     border-radius: 15px;
     color: white;
-    border: 3px solid;
-    border-image: linear-gradient(45deg, #0ff, #f0f) 1;
+    box-shadow:
+    0 0 10px #fff,
+    -2px -2px 3px #f0f,
+    2px 2px 3px #0ff;
     border-radius: 2vmin;
-    box-shadow: 0px 0px 5px 1px;
     margin: 5px;
+}
+
+.in:hover {
+    box-shadow:
+    0 0 10px #fff,
+    0px 0px 10px rgb(0, 255, 0);
+
+    
 }
 
 .gg {
@@ -101,9 +112,9 @@ div.glow {
 
 
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(20px); }
-    100% { transform: translateY(0); }
+    0% {}
+    50% {}
+    100% {}
 }
 
 @keyframes rotate {
