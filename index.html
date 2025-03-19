@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="css/style.css?t=<%= new Date().getTime() %>">
 </head>
 <body>
+    <div id="do_txt" class="gg">
+        <p>Индивидуальная потребность в необходимой продолжительности сна различна. Исследования близнецов доказывают, что характеристики сна находятся под сильным генетическим влиянием. Показано, что 46 % изменчивости продолжительности сна и 44 % изменчивости качества сна обусловлены генетически[30].</p>
+    </div>
     <div class="helper">
         <div class="glow"></div>
         <div class="textbox">
                 <p class="loser">Выберите желаемое время засыпания</p>
                 <form action="">
-                    <p class="input">
-                        <input class="in" type="button" name="option" value="до 21:00"> 
-                        <input class="in" type="button" name="option" value=" 21:00">
-                        <input class="in" type="button" name="option" value="22:00"> 
-                        <input class="in" type="button" name="option" value="23:00"> 
-                        <input class="in" type="button" name="option" value="после 23:00"> 
+                    <p class="in">
+                        <input id="do" class="input" type="button" name="option" value="до 21:00"> 
+                        <input id="21" class="input" type="button" name="option" value=" 21:00">
+                        <input id="22" class="input" type="button" name="option" value="22:00"> 
+                        <input id="23" class="input" type="button" name="option" value="23:00"> 
+                        <input id="posle" class="input" type="button" name="option" value="после 23:00"> 
                     </p>
                 </form>
+                <script src="script.js"></script>
         </div>
     </div>
 </body>
