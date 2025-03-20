@@ -3,11 +3,35 @@ const _22_txt = document.getElementById('22_txt');
 const _23_txt = document.getElementById('23_txt');
 const posle_txt = document.getElementById('posle-txt');
 
+x = 14
+const body = document.getElementById('body');
+const butt = document.getElementById('butt');
+const notify = document.getElementById('notify')
+
 const do_ = document.getElementById('do');
 const _21 = document.getElementById('21');
 const _22 = document.getElementById('22');
 const _23 = document.getElementById('23');
 const posle_ = document.getElementById('posle');
+
+butt.addEventListener('click', function() {
+    if (x < 28) {
+        x = x + 2;
+    } else {
+        x = 14;
+    }
+
+    notify.innerText = 'Размер шрифта ' + x;
+
+    document.body.style.cssText = `font-size: ${x}px;`;
+
+
+    notify.style.animation = 'none'; // Удаляем анимацию
+    setTimeout(() => {
+        notify.style.animation = 'notif 1.5s ease-in-out'; // Применяем анимацию снова
+    }, 10); // Небольшая задержка для перезапуска анимации
+});
+
 
 
 function resetButtons() {
@@ -29,17 +53,19 @@ function resetButtons() {
 
     txt.forEach(element => {
         element.style.cssText = `
-            position: fixed;
-            top: 10%;
-            left: 10%;
-            width: 80%;
-            text-align: center;
-            padding: 10px;
-            width: 80%;
-            background-color: none;
-            font-family: sans-serif;
-            opacity: 0%;
-            transition: all 0.1s ease;
+        position: fixed;
+        margin-top: 10%;
+        padding: 1%;
+        left: 0%;
+        width: 80%;
+        margin-bottom: 40%;
+        box-shadow:
+        0 0 15px #fff,
+        -5px -5px 10px #f0f,
+        5px 5px 10px #0ff;
+        opacity: 0%;
+        border-radius: 10px;
+        transition: all 0.3s ease;
         `;
     });
 }

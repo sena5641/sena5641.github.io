@@ -7,7 +7,8 @@
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css?t=<%= new Date().getTime() %>">
 </head>
-<body>
+<body id="body">
+    <p id="notify"> example </p>
     <div id="23_txt" class="gg"><pre style="white-space: pre-wrap; word-break: normal;">
         <h1>Плюсы и минусы позднего отхода ко сну</h1>
 
@@ -37,7 +38,7 @@
     <div class="helper">
         <div class="glow"></div>
         <div class="textbox">
-                <p class="loser">Выберите желаемое время засыпания</p>
+                <h2 class="loser">Выберите желаемое время засыпания</h2>
                 <form action="">
                     <p class="in">
                         <input id="do" class="input" type="button" name="option" value="до 21:00"> 
@@ -47,11 +48,9 @@
                         <input id="posle" class="input" type="button" name="option" value="после 23:00"> 
                     </p>
                 </form>
-                <img src="assets\6.png" alt="">
+                <img id="butt" src="assets\6.png" alt="увеличить размер текста">
         </div>
     </div>
-
 </body>
-
 <script src="script.js"></script>
 </html>
