@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    line-height: 1.2; 
+    line-height: 1.1; 
     background-color: #292a2d; 
     color: white;
     text-align: center;
@@ -11,15 +11,16 @@ body {
 li, h1, h2 {
     margin: 0;
     padding: 0;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
 }
 
 ul {
     margin: 0;
     padding: 0;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    text-align: left;
 }
 
 .gg {
@@ -46,6 +47,7 @@ ul {
     align-items: end;
     text-align: center;
     background-color: #292a2d;
+    transition: all 1s none;
 }
 
 .textbox {
@@ -59,6 +61,7 @@ ul {
     border-radius: 40px 40px 40px 5px;
     border: 2px #00c2cb ;
     background-color: #404045;
+    transition: all 1s;
 }
 
 div.glow {
@@ -76,8 +79,6 @@ div.glow {
     0 0 2vmin #fff,
     -1vmin 0 3vmin #f0f,
     1vmin 0 3vmin #0ff;
-
-    
 }
 
 img {
@@ -98,7 +99,7 @@ img {
     -2px -2px 3px #f0f,
     2px 2px 3px #0ff;
     border-radius: 2vmin;
-    margin: 10px;
+    margin: 5px;
     font-size: 20px;
 }
 
@@ -110,7 +111,8 @@ img {
     padding: 10px 0 10px 0;
     border-radius: 1em;
     opacity: 0;
-    transition: all 5s ;
+    transition: all 1s;
+    transform: translateX(-100%) ;
 }
 
 
@@ -124,5 +126,23 @@ img {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes bob {
+    0% {
+        left: 3%;
+        width: 5vmin;
+        height: 5vmin;
+    }
+    50% {
+        left: 2.6%;
+        width: 5.5vmin;
+        height: 5.5vmin;
+    }
+    100% {
+        left: 3%;
+        width: 5vmin;
+        height: 5vmin;
     }
 }
