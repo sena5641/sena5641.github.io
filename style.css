@@ -53,7 +53,7 @@ h1 {
 
 div.glow {
     position: fixed;
-    top: 93%;
+    bottom: 1em;
     left: 3% ;
     width: 5vmin;
     height: 5vmin;
