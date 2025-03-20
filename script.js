@@ -1,7 +1,7 @@
 const do_txt = document.getElementById('do_txt');
-const _22_txt = document.getElementsByClassName('22');
-const _23_txt = document.getElementsByClassName('23');
-const posle_txt = document.getElementsByClassName('posle');
+const _22_txt = document.getElementById('22_txt');
+const _23_txt = document.getElementById('23_txt');
+const posle_txt = document.getElementById('posle-txt');
 
 const do_ = document.getElementById('do');
 const _21 = document.getElementById('21');
@@ -29,17 +29,15 @@ function resetButtons() {
 
     txt.forEach(element => {
         element.style.cssText = `
-            position: relative;
+            position: fixed;
             top: 10%;
+            left: 10%;
+            width: 80%;
             text-align: center;
-            padding: 100px;
+            padding: 10px;
             width: 80%;
             background-color: none;
             font-family: sans-serif;
-            box-shadow:
-            0 0 15px #fff,
-            -5px -5px 10px #f0f,
-            5px 5px 10px #0ff;
             opacity: 0%;
             transition: all 0.1s ease;
         `;
@@ -47,7 +45,7 @@ function resetButtons() {
 }
 
 do_.addEventListener('click', function() {
-    // Меняем несколько стилей body
+    // Меняем несколько стилей
     resetButtons();
     do_.style.cssText = `
         box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
@@ -60,43 +58,65 @@ do_.addEventListener('click', function() {
         border-radius: 40px 40px 40px 40px;
         transition: all 0.3s ease;
     `;
-
-
-
 });
 
 _21.addEventListener('click', function() {
-    // Меняем несколько стилей body
     resetButtons();
     _21.style.cssText = `
-    box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
-    padding: 10px;
-    transition: all 0.5s ease`;
+        box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
+        padding: 10px;
+        transition: all 0.2s ease`;
+    _21_txt.style.cssText = `
+        opacity: 100%;
+        top: 10%;
+        left: 9%;
+        border-radius: 40px 40px 40px 40px;
+        transition: all 0.3s ease;
+    `;
 });
 
 _22.addEventListener('click', function() {
-    // Меняем несколько стилей body
     resetButtons();
     _22.style.cssText = `
-    box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
-    padding: 10px;
-    transition: all 0.5s ease`;
+        box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
+        padding: 10px;
+        transition: all 0.2s ease`;
+    _22_txt.style.cssText = `
+        opacity: 100%;
+        top: 10%;
+        left: 9%;
+        border-radius: 40px 40px 40px 40px;
+        transition: all 0.3s ease;
+    `;
 });
 
 _23.addEventListener('click', function() {
-    // Меняем несколько стилей body
     resetButtons();
     _23.style.cssText = `
-    box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
-    padding: 10px;
-    transition: all 0.5s ease`;
+        box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
+        padding: 10px;
+        transition: all 0.2s ease`;
+    _23_txt.style.cssText = `
+        position: relative;
+        opacity: 100%;
+        top: 10%;
+        left: 9%;
+        border-radius: 40px 40px 40px 40px;
+        transition: all 0.3s ease;
+    `;
 });
 
 posle_.addEventListener('click', function() {
-    // Меняем несколько стилей body
     resetButtons();
     posle_.style.cssText = `
-    box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
-    padding: 10px;
-    transition: all 0.5s ease`;
+        box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
+        padding: 10px;
+        transition: all 0.2s ease`;
+    posle_txt.style.cssText = `
+        opacity: 100%;
+        top: 10%;
+        left: 9%;
+        border-radius: 40px 40px 40px 40px;
+        transition: all 0.3s ease;
+    `;
 });

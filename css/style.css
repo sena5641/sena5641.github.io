@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    line-height: 3vh;;
+    line-height: 5vh;;
     background-color: black; 
     color: white;
     text-align: center;
@@ -18,20 +18,20 @@ body {
     0 0 15px #fff,
     -5px -5px 10px #f0f,
     5px 5px 10px #0ff;
-    
+    opacity: 100%;
+    border-radius: 10px;
 }
 
 .helper {
-    position: absolute;
+    position: sticky;
+    bottom: 15px;
     width: 100%;
-    bottom: 10%;
     align-items: end;
-    z-index: auto;
     text-align: center;
 }
 
 .textbox {
-    position: relative;
+    position: absolute;
     padding: 1%;
     left: 9%;
     width: 80%;
@@ -42,7 +42,6 @@ body {
     0 0 15px #fff,
     -5px -5px 10px #f0f,
     5px 5px 10px #0ff;
-    z-index: 3;
 }
 
 div.glow {
@@ -60,7 +59,6 @@ div.glow {
     0 0 5vmin #fff,
     -3vmin 0 8vmin #f0f,
     3vmin 0 8vmin #0ff;
-    z-index: -20;
 
     
 }
