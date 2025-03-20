@@ -32,7 +32,7 @@ function resetButtons() {
             position: relative;
             top: 10%;
             text-align: center;
-            padding: 5px;
+            padding: 100px;
             width: 80%;
             background-color: none;
             font-family: sans-serif;
