@@ -8,20 +8,37 @@ body {
 
 }
 
-li, h1, h2 {
+ h1 {
     margin: 0;
     padding: 10px 0 0 0;
     margin-top: 0em;
     margin-bottom: 0em;
+
+
 }
 
-ul {
+h2 {
     margin: 0;
-    padding: 0;
+    padding: 10px 0 0 0;
     margin-top: 0em;
     margin-bottom: 0em;
     text-align: left;
-    padding-left: 20px; 
+}
+
+  .highlight {
+    color: #32e622;
+    font-weight: bold;
+    }
+    .highlight2 {
+    color: #e6ab22;
+    }
+
+ul  {
+    list-style: none;
+    text-align: left;
+
+    border-left: 3px solid #3498db;
+    line-height: 1.5;
 }
 
 .sleep-recommendations {
@@ -35,8 +52,9 @@ ul {
     0 0 15px #fff,
     -5px -5px 10px #f0f,
     5px 5px 10px #0ff;
-    opacity: 0%;
+    opacity: 0;
     border-radius: 10px;
+    background-color: #404045;
 }
 
 .helper {
@@ -49,6 +67,7 @@ ul {
     text-align: center;
     background-color: #292a2d;
     transition: all 1s none;
+    z-index: 5;
 }
 
 .textbox {
@@ -80,6 +99,11 @@ div.glow {
     0 0 2vmin #fff,
     -1vmin 0 3vmin #f0f,
     1vmin 0 3vmin #0ff;
+}
+
+iframe {
+   width: 70%; 
+   height: 40em;
 }
 
 #butt {
@@ -115,7 +139,7 @@ div.glow {
 #notify {
     position: fixed;
     left: 75%;
-    background-color: rgba(0, 0, 0, 0.407);
+    background-color: rgb(29, 29, 29);
     width: 50%;
     padding: 10px 0 10px 0;
     border-radius: 1em;
@@ -124,6 +148,7 @@ div.glow {
     transform: translateX(-100%) ;
 }
 
+.example {color: #95a5a6; font-size: 0.9em; margin-top: 5px;}
 
 
 @keyframes notif {

@@ -82,9 +82,9 @@ function resetButtons() {
         0 0 15px #fff,
         -5px -5px 10px #f0f,
         5px 5px 10px #0ff;
-        opacity: 0%;
+        opacity: 0;
         border-radius: 10px;
-        transition: all 0.3s ease;
+        z-index: 0;
         `;
     });
 }
@@ -97,7 +97,8 @@ _6.addEventListener('click', function() {
         padding: 10px;
         transition: all 0.2s ease`;
     _6_txt.style.cssText = `
-        opacity: 100%;
+        position: relative;
+        opacity: 1;
         top: 10%;
         left: 9%;
         border-radius: 40px 40px 40px 40px;
@@ -113,7 +114,7 @@ _7.addEventListener('click', function() {
         transition: all 0.2s ease`;
     _7_txt.style.cssText = `
         position: relative;
-        opacity: 100%;
+        opacity: 1;
         top: 10%;
         left: 9%;
         border-radius: 40px 40px 40px 40px;
@@ -128,7 +129,8 @@ _8.addEventListener('click', function() {
         padding: 10px;
         transition: all 0.2s ease`;
     _8_txt.style.cssText = `
-        opacity: 100%;
+        position: relative;
+        opacity: 1;
         top: 10%;
         left: 9%;
         border-radius: 40px 40px 40px 40px;
@@ -144,7 +146,7 @@ _9.addEventListener('click', function() {
         transition: all 0.2s ease`;
     _9_txt.style.cssText = `
         position: relative;
-        opacity: 100%;
+        opacity: 1;
         top: 10%;
         left: 9%;
         border-radius: 40px 40px 40px 40px;
@@ -159,7 +161,8 @@ posle_.addEventListener('click', function() {
         padding: 10px;
         transition: all 0.2s ease`;
     posle_txt.style.cssText = `
-        opacity: 100%;
+        position: relative;
+        opacity: 1;
         top: 10%;
         left: 9%;
         border-radius: 40px 40px 40px 40px;
