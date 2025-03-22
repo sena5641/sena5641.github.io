@@ -1,19 +1,20 @@
-const do_txt = document.getElementById('do_txt');
-const _22_txt = document.getElementById('22_txt');
-const _23_txt = document.getElementById('23_txt');
-const posle_txt = document.getElementById('posle-txt');
+const _6_txt = document.getElementById('6_txt');
+const _7_txt = document.getElementById('7_txt');
+const _8_txt = document.getElementById('8_txt');
+const _9_txt = document.getElementById('9_txt');
+const posle_txt = document.getElementById('posle_txt'); // Исправлено: 'posle-txt' -> 'posle_txt'
 
 x = 14;
 off = false;
 const body = document.getElementById('body');
 const butt = document.getElementById('butt');
 const notify = document.getElementById('notify')
-const glow = document.getElementById('glow');
+const glow = document.getElementById('off');
 
-const do_ = document.getElementById('do');
-const _21 = document.getElementById('21');
-const _22 = document.getElementById('22');
-const _23 = document.getElementById('23');
+const _6 = document.getElementById('6');
+const _7 = document.getElementById('7');
+const _8 = document.getElementById('8');
+const _9 = document.getElementById('9');
 const posle_ = document.getElementById('posle');
 
 butt.addEventListener('click', function() {
@@ -34,25 +35,26 @@ butt.addEventListener('click', function() {
 
 glow.addEventListener('click', function() {
     off = !off;
-    notify.innerText = off;
     if (off == true) {
+        setTimeout(() => {
+            document.getElementById('helper').style.bottom = '-100%'; // Применяем анимацию снова
+        }, 1450);
     document.getElementById('helper').style.cssText = `
-    transform: right: -100%;;
+        animation: off 1.5s ease-in-out
     `;
     };
     if (off == false) {
+            setTimeout(() => {
+                document.getElementById('helper').style.bottom = '0'; // Применяем анимацию снова
+            }, 1450);
     document.getElementById('helper').style.cssText = `
-
+        animation: on 1.5s ease-in-out
     `;
     }
-    glow.style.animation = 'none';
-    setTimeout(() => {
-        glow.style.animation = 'bob 1s'; // Применяем анимацию снова
-    }, 10);
 });
 
 function resetButtons() {
-    const buttons = [do_, _21, _22, _23, posle_];
+    const buttons = [_6, _7, _8 , _9, posle_];
     buttons.forEach(button => {
         button.style.cssText = `
             background: none;
@@ -66,7 +68,7 @@ function resetButtons() {
             transition: all 1s ease;
         `;
     });
-    const txt = document.querySelectorAll('.gg'); // Получаем все элементы с классом '55'
+    const txt = [_6_txt, _7_txt, _8_txt, _9_txt, posle_txt]; 
 
     txt.forEach(element => {
         element.style.cssText = `
@@ -87,14 +89,14 @@ function resetButtons() {
     });
 }
 
-do_.addEventListener('click', function() {
+_6.addEventListener('click', function() {
     // Меняем несколько стилей
     resetButtons();
-    do_.style.cssText = `
+    _6.style.cssText = `
         box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
         padding: 10px;
         transition: all 0.2s ease`;
-    do_txt.style.cssText = `
+    _6_txt.style.cssText = `
         opacity: 100%;
         top: 10%;
         left: 9%;
@@ -103,13 +105,14 @@ do_.addEventListener('click', function() {
     `;
 });
 
-_21.addEventListener('click', function() {
+_7.addEventListener('click', function() {
     resetButtons();
-    _21.style.cssText = `
+    _7.style.cssText = `
         box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
         padding: 10px;
         transition: all 0.2s ease`;
-    _21_txt.style.cssText = `
+    _7_txt.style.cssText = `
+        position: relative;
         opacity: 100%;
         top: 10%;
         left: 9%;
@@ -118,13 +121,13 @@ _21.addEventListener('click', function() {
     `;
 });
 
-_22.addEventListener('click', function() {
+_8.addEventListener('click', function() {
     resetButtons();
-    _22.style.cssText = `
+    _8.style.cssText = `
         box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
         padding: 10px;
         transition: all 0.2s ease`;
-    _22_txt.style.cssText = `
+    _8_txt.style.cssText = `
         opacity: 100%;
         top: 10%;
         left: 9%;
@@ -133,13 +136,13 @@ _22.addEventListener('click', function() {
     `;
 });
 
-_23.addEventListener('click', function() {
+_9.addEventListener('click', function() {
     resetButtons();
-    _23.style.cssText = `
+    _9.style.cssText = `
         box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
         padding: 10px;
         transition: all 0.2s ease`;
-    _23_txt.style.cssText = `
+    _9_txt.style.cssText = `
         position: relative;
         opacity: 100%;
         top: 10%;
