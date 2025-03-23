@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор сна</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .calculator {
+            background-color: #404045;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.5;
+        }
+        #wakeTime {
+            background-color: rgba(255, 255, 255, 0.562);
+            padding: 5px;
+            color: black;
+            border: none;
+            margin: 10px;
+            border-radius: 15px;
+            outline: black 2px solid;
+        }
+        button {
+            background: none;
+            padding: 5px 15px;
+            color: white;
+            border: none;
+            box-shadow: 0 0 10px #fff,
+                       -2px -2px 3px #f0f,
+                       2px 2px 3px #0ff;
+            border-radius: 2vmin;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        button:active {
+            transform: scale(0.9);
+            box-shadow: 0 0 5px #fff, 0px 0px 3px rgb(4, 255, 0);
+            transition: all 0.2s ease;
+        }
+        .wake-times-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .wake-time-1, .wake-time-2, .wake-time-3 {
+            opacity: 0;
+            transform: translateY(50%);
+            transition: all 0.5s ease;
+        }
+        .wake-time-1.show {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0s;
+        }
+        .wake-time-2.show {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.2s;
+        }
+        .wake-time-3.show {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.4s;
+        }
+        .wake-time-1 {
+            color: #2ecc70;
+            background-color: #2ecc701e;
+            border-radius: 15px;
+            font-size: 1.5em;
+            text-align: center;
+            width: 250px;
+            padding: 5px;
+        }
+        .wake-time-2 {
+            background-color: #f39c121e;
+            border-radius: 15px;
+            color: #f39c12;
+            font-size: 1.5em;
+            text-align: center;
+            width: 250px;
+        }
+        .wake-time-3 {
+            background-color: #e74d3c1e;
+            border-radius: 15px;
+            color: #e74c3c;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #fallAsleepTime {
+            background-color: rgba(255, 255, 255, 0.562);
+            padding: 5px;
+            color: black;
+            border: none;
+            margin: 10px;
+            border-radius: 15px;
+            outline: black 2px solid;
+            width: 60px;
+        }
+        .highlight {
+            display: block;
+            margin: 5px 0;
+        }
+        .highlight-6 { color: #2ecc71; font-size: 1.5em; }
+        .highlight-5 { color: #f39c12; font-size: 1.5em; }
+        .highlight-4 { color: #e74c3c; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Рассчитать точное время сна</h2>
+        <p>Выберите время пробуждения:
+        <input type="time" id="wakeTime" value="07:00"></p>
+            <p for="fallAsleepTime">Время засыпания (минут):
+            <input type="number" id="fallAsleepTime" value="15" min="0" max="60"></p>
+        <button onclick="calculateSleep()">Рассчитать</button>
+        <div class="wake-times-container">
+            <div class="wake-time-1"></div>
+            <div class="wake-time-2"></div>
+        </div>
+        <div class="wake-time-3"></div>
+    </div>
+
+    <script>
+        function calculateSleep() {
+            const wakeTime = document.getElementById('wakeTime').value;
+            const [hours, minutes] = wakeTime.split(':').map(Number);
+            const wakeDate = new Date();
+            wakeDate.setHours(hours, minutes, 0);
+
+            const FallAsleepTime = parseInt(document.getElementById('fallAsleepTime').value) || 14;
+            
+            const cycles = [6, 5, 4];
+            const elements = [
+                document.querySelector('.wake-time-1'),
+                document.querySelector('.wake-time-2'),
+                document.querySelector('.wake-time-3')
+            ];
+
+            cycles.forEach((cycle, index) => {
+                const sleepDate = new Date(wakeDate);
+                sleepDate.setTime(sleepDate.getTime() - cycle * 90 * 60 * 1000 - FallAsleepTime * 60 * 1000);
+                const timeString = sleepDate.toLocaleTimeString('ru', {
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+                elements[index].innerHTML = `${cycle} циклов сна <br>Лечь спать в ${timeString}`;
+                
+                // Добавляем класс show с небольшой задержкой
+                elements[index].classList.remove('show');
+                setTimeout(() => {
+                    elements[index].classList.add('show');
+                }, 50);
+            });
+        }
+    </script>
+</body>
+</html>

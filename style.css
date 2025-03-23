@@ -82,6 +82,7 @@ ul  {
     border: 2px #00c2cb ;
     background-color: #404045;
     transition: all 1s;
+
 }
 
 div.glow {
@@ -99,6 +100,7 @@ div.glow {
     0 0 2vmin #fff,
     -1vmin 0 3vmin #f0f,
     1vmin 0 3vmin #0ff;
+
 }
 
 iframe {
@@ -111,6 +113,17 @@ iframe {
     width: 5vmin;
     bottom: 10px;
     right: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#butt:hover {
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+}
+
+#butt:active {
+    transform: scale(0.95);
 }
 
 #off {
@@ -119,8 +132,24 @@ iframe {
     bottom: 10vmin;
     right: 5px;
     z-index: 50;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
+#off:hover {
+    scale:1.1;
+    transition-duration: 0.1s;
+}
+
+#off:active {
+    transform: scale(0.95);
+}
+
+#off:active::after {
+    box-shadow: 0 0 0 0 white;
+    opacity: 1;
+    transition: 0s;
+}
 
 .input {
     background: none;
@@ -135,6 +164,21 @@ iframe {
     margin: 5px;
     font-size: 20px;
 }
+
+
+#off:active::after{
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    bottom: 10vmin;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+#off:active {
+    bottom: 9.5vmin;
+  }
+  
 
 #notify {
     position: fixed;
@@ -163,6 +207,15 @@ iframe {
     }
 }
 
+@keyframes click {
+    0%{
+        transform: scaleY(1px);
+    }
+    100% {
+        transform: scaleY(100px);
+    }
+}
+
 @keyframes off {
     0% {
         bottom: 0;
@@ -174,7 +227,7 @@ iframe {
 
 @keyframes on {
     0% {
-        bottom: -100%;
+        bottom: -80%;
     }
     100% {
         bottom: 0;

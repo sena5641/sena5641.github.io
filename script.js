@@ -2,7 +2,7 @@ const _6_txt = document.getElementById('6_txt');
 const _7_txt = document.getElementById('7_txt');
 const _8_txt = document.getElementById('8_txt');
 const _9_txt = document.getElementById('9_txt');
-const posle_txt = document.getElementById('posle_txt'); // Исправлено: 'posle-txt' -> 'posle_txt'
+const posle_txt = document.getElementById('posle_txt');
 
 x = 14;
 off = false;
@@ -27,29 +27,29 @@ butt.addEventListener('click', function() {
 
     notify.innerText = 'Размер шрифта ' + x;
 
-    notify.style.animation = 'none'; // Удаляем анимацию
+    notify.style.animation = 'none';
     setTimeout(() => {
-        notify.style.animation = 'notif 1.5s ease-in-out'; // Применяем анимацию снова
-    }, 10); // Небольшая задержка для перезапуска анимации
+        notify.style.animation = 'notif 1.5s ease-in-out';
+    }, 10);
 });
 
 glow.addEventListener('click', function() {
     off = !off;
     if (off == true) {
         setTimeout(() => {
-            document.getElementById('helper').style.bottom = '-100%'; // Применяем анимацию снова
+            document.getElementById('helper').style.bottom = '-100%';
         }, 1450);
-    document.getElementById('helper').style.cssText = `
-        animation: off 1.5s ease-in-out
-    `;
+        document.getElementById('helper').style.animation = `off 1.5s`;
+        glow.style.transform = "rotate(180deg)";
+
     };
     if (off == false) {
-            setTimeout(() => {
+        setTimeout(() => {
                 document.getElementById('helper').style.bottom = '0'; // Применяем анимацию снова
-            }, 1450);
-    document.getElementById('helper').style.cssText = `
-        animation: on 1.5s ease-in-out
-    `;
+        }, 990);
+        document.getElementById('helper').style.animation = `on 1s`;
+    glow.style.transform = "rotate(0deg)";
+
     }
 });
 
@@ -90,11 +90,10 @@ function resetButtons() {
 }
 
 _6.addEventListener('click', function() {
-    // Меняем несколько стилей
     resetButtons();
     _6.style.cssText = `
-        box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
-        padding: 10px;
+        box-shadow: 0 0 5px #fff, 0px 0px 3px rgb(4, 255, 0);
+        transform: scale(1.1);
         transition: all 0.2s ease`;
     _6_txt.style.cssText = `
         position: relative;
@@ -109,8 +108,8 @@ _6.addEventListener('click', function() {
 _7.addEventListener('click', function() {
     resetButtons();
     _7.style.cssText = `
-        box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
-        padding: 10px;
+        box-shadow: 0 0 5px #fff, 0px 0px 3px rgb(4, 255, 0);
+        transform: scale(1.1);
         transition: all 0.2s ease`;
     _7_txt.style.cssText = `
         position: relative;
@@ -125,8 +124,8 @@ _7.addEventListener('click', function() {
 _8.addEventListener('click', function() {
     resetButtons();
     _8.style.cssText = `
-        box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
-        padding: 10px;
+        box-shadow: 0 0 5px #fff, 0px 0px 3px rgb(4, 255, 0);
+        transform: scale(1.1);
         transition: all 0.2s ease`;
     _8_txt.style.cssText = `
         position: relative;
@@ -141,8 +140,8 @@ _8.addEventListener('click', function() {
 _9.addEventListener('click', function() {
     resetButtons();
     _9.style.cssText = `
-        box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
-        padding: 10px;
+        box-shadow: 0 0 5px #fff, 0px 0px 3px rgb(4, 255, 0);
+        transform: scale(1.1);
         transition: all 0.2s ease`;
     _9_txt.style.cssText = `
         position: relative;
@@ -157,8 +156,8 @@ _9.addEventListener('click', function() {
 posle_.addEventListener('click', function() {
     resetButtons();
     posle_.style.cssText = `
-        box-shadow: 0 0 10px #fff, 0px 0px 10px rgb(4, 255, 0);
-        padding: 10px;
+        box-shadow: 0 0 5px #fff, 0px 0px 3px rgb(4, 255, 0);
+        transform: scale(1.1);
         transition: all 0.2s ease`;
     posle_txt.style.cssText = `
         position: relative;
